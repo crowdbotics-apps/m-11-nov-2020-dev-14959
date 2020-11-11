@@ -25,7 +25,14 @@ export default class Blank extends React.Component {
 
   state = {}
 
-  render = () => <View />
+  render = () => (
+    <View>
+      <Button
+        title="Press me!"
+        onPress={() => this.props.navigation.navigate("BlankScreen014317")}
+      />
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -36,5 +43,7 @@ const styles = StyleSheet.create({
 
   View_1: {},
   Button_2: {},
-  View_1: {}
+  View_1: {},
+  View_1: {},
+  Button_2: {}
 })
