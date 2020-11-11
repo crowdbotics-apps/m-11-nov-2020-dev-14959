@@ -1,6 +1,6 @@
 import axios from "axios"
 const mnovAPI = axios.create({
-  baseURL: "https://m-11-nov-2020-dev-14959-prod.herokuapp.com/",
+  baseURL: "https://m-11-nov-2020-dev-14959.botics.co/",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function api_v1_customtext_list(action) {
