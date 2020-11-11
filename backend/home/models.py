@@ -10,11 +10,6 @@ class CustomText(models.Model):
     title = models.CharField(
         max_length=150,
     )
-    jghjgkjkjhkjkhgkjhgkj = models.ManyToManyField(
-        "home.CustomText",
-        blank=True,
-        related_name="customtext_jghjgkjkjhkjkhgkjhgkj",
-    )
 
     def __str__(self):
         return self.title
