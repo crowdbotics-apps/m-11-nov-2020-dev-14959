@@ -23,10 +23,17 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { CheckBox_11: true, CheckBox_12: true, CheckBox_13: true }
+  state = {
+    CheckBox_11: true,
+    CheckBox_12: true,
+    CheckBox_13: true,
+    TextInput_15: "",
+    TextInput_16: "",
+    DateTimePicker_17: new Date("")
+  }
 
   render = () => (
-    <View>
+    <ImageBackground>
       <CheckBox
         title="Radio button"
         checked={this.state.CheckBox_11}
@@ -39,12 +46,29 @@ export default class Blank extends React.Component {
       />
       <CheckBox
         title="Radio button"
-        checkedIcon="dot-circle-o"
-        uncheckedIcon="circle-o"
         checked={this.state.CheckBox_13}
         onPress={nextChecked => this.setState({ CheckBox_13: nextChecked })}
       />
-    </View>
+      <TextInput
+        placeholder="Sample text input placeholder"
+        style={styles.TextInput_15}
+        value={this.state.TextInput_15}
+        onChangeText={nextValue => this.setState({ TextInput_15: nextValue })}
+      />
+      <TextInput
+        placeholder="Number Input Placeholder"
+        style={styles.TextInput_16}
+        value={this.state.TextInput_16}
+        onChangeText={nextValue => this.setState({ TextInput_16: nextValue })}
+      />
+      <DateTimePicker
+        date={this.state.DateTimePicker_17}
+        onDateChange={selectedDate =>
+          this.setState({ DateTimePicker_17: selectedDate })
+        }
+      />
+      <Text>Sample text content</Text>
+    </ImageBackground>
   )
 }
 
@@ -89,5 +113,13 @@ const styles = StyleSheet.create({
   View_1: {},
   CheckBox_11: {},
   CheckBox_12: {},
-  CheckBox_13: {}
+  CheckBox_13: {},
+  ImageBackground_1: {},
+  CheckBox_11: {},
+  CheckBox_12: {},
+  CheckBox_13: {},
+  TextInput_15: { textAlign: "center" },
+  TextInput_16: { textAlign: "center" },
+  DateTimePicker_17: {},
+  Text_18: {}
 })
