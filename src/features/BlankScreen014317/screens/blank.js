@@ -33,7 +33,6 @@ export default class Blank extends React.Component {
         </View>
         <View>
           <Switch
-            trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
             style={styles.Switch_10}
             value={this.state.Switch_10}
             onValueChange={nextChecked =>
@@ -70,6 +69,12 @@ const styles = StyleSheet.create({
 
   View_3: {},
   View_4: {},
+  View_1: {},
+  View_2: { flexDirection: "row" },
+  View_3: {},
+  Button_6: {},
+  View_4: {},
+  Switch_10: { alignSelf: "flex-start" },
   View_1: {},
   View_2: { flexDirection: "row" },
   View_3: {},
