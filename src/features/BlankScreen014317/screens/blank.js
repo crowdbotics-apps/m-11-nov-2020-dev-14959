@@ -23,24 +23,17 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { Switch_10: true }
+  state = { CheckBox_11: true }
 
   render = () => (
     <View>
-      <View style={styles.View_2}>
-        <View>
-          <Button title="Press me!" onPress={() => alert("Pressed!")} />
-        </View>
-        <View>
-          <Switch
-            style={styles.Switch_10}
-            value={this.state.Switch_10}
-            onValueChange={nextChecked =>
-              this.setState({ Switch_10: nextChecked })
-            }
-          />
-        </View>
-      </View>
+      <CheckBox
+        title="Radio button"
+        checkedIcon="dot-circle-o"
+        uncheckedIcon="circle-o"
+        checked={this.state.CheckBox_11}
+        onPress={nextChecked => this.setState({ CheckBox_11: nextChecked })}
+      />
     </View>
   )
 }
@@ -80,5 +73,7 @@ const styles = StyleSheet.create({
   View_3: {},
   Button_6: {},
   View_4: {},
-  Switch_10: { alignSelf: "flex-start" }
+  Switch_10: { alignSelf: "flex-start" },
+  View_1: {},
+  CheckBox_11: {}
 })
